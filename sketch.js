@@ -15,17 +15,14 @@ function draw() {
     if(def>180){
       car.shapeColor = "red";
       text("lethal",400,200);
-      def = 0;
       }
       if(def>=100 && def<=180){
       car.shapeColor = "yellow";
       text("average",400,200);
-        def = 0;
       }
       if(def<100){
        car.shapeColor = "green";
        text("good",400,200);
-        def = 0;
        }
   }
   drawSprites();
