@@ -2,9 +2,8 @@ function setup() {
   createCanvas(800,400);
   car  = createSprite(200, 200, 50, 10);
   wall = createSprite(700,200,20,100);
-  speed= random(15,60);
   weight = random(700,2000);
-  car.velocityX = speed;
+  car.velocityX = random(5,30);
 }
 function draw() {
   background(0);  
