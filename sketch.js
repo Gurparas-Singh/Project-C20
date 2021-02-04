@@ -2,14 +2,15 @@ function setup() {
   createCanvas(800,400);
   car  = createSprite(200, 200, 50, 10);
   wall = createSprite(700,200,20,100);
-  weight = random(400,2000);
-  car.velocityX = random(5,20);
+  speed= random(40,100);
+  weight = random(1000,5000);
+  car.velocityX = speed;
 }
 function draw() {
   background(0);  
-  if(car.x - wall.x < car.width/2 + wall.width/2
-    && wall.x - car.x < car.width/2 + wall.width/2 ){
+  if(wall.x - car.x < car.width/2 + wall.width/2 ){
       var def = (0.5*weight*speed*speed)/22500;
+      car.velocityX = 0;
     if(def>180){
       car.shapeColor = "red";
       text("lethal",400,200);
